@@ -23,4 +23,22 @@ apt-get install -y lxc-docker
 
 获取镜像
 docker pull ubuntu:12.04
-##如果被墙，可以使用国内镜像源http://dockerpool.com/ 
+##1）如果被墙，可以使用国内镜像源http://dockerpool.com/ 
+例如：
+$ sudo docker pull dl.dockerpool.com:5000/ubuntu:12.04
+$ sudo docker tag dl.dockerpool.com:5000/ubuntu:12.04 ubuntu:12.04
+
+##2）如果你有镜像的jar文件，则可以直接导入 如下所示：
+  docker load < ubuntu1204.jar
+  
+至此 
+docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+ubuntu              12.04               9c5e4be642b7        3 weeks ago         131.9 MB
+ubuntu              12.04.5             9c5e4be642b7        3 weeks ago         131.9 MB
+ubuntu              precise             9c5e4be642b7        3 weeks ago         131.9 MB
+ubuntu              precise-20150320    9c5e4be642b7        3 weeks ago         131.9 MB
+
+
+
