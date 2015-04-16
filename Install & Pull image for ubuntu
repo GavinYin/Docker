@@ -1,0 +1,26 @@
+#安装内核
+sudo apt-get update
+sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
+
+#重启
+sudo reboot
+
+添加Docker的repository到你的本地秘钥库
+#需要联网
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+
+# 将Docker添加到你的apt软件安装源中
+echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+#如果被墙，有个国内的安装源
+echo deb http://mirror.yandex.ru/mirrors/docker/ docker main\
+> /etc/apt/sources.list.d/docker.list"
+
+# Install docker
+apt-get update
+apt-get install -y lxc-docker
+
+至此已成功安装docker
+
+获取镜像
+docker pull ubuntu:12.04
+##如果被墙，可以使用国内镜像源http://dockerpool.com/ 
