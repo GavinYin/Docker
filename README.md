@@ -1,2 +1,2 @@
 # Docker
-1、Docker安装部署
+1、Docker安装部署&pull image
